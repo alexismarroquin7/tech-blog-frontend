@@ -4,9 +4,9 @@ const posts = [
   {
     post_id: uuid(),
     title: "Galaxy S22 Ultra 8 Months Later",
-    title_url: "Galaxy-S22-Ultra-8-Months-Later",
-    date_created: "",
-    date_updated: "",
+    custom_url: "Galaxy-S22-Ultra-8-Months-Later",
+    date_created: "2022-11-15T18:17:33",
+    date_updated: "2022-11-15T00:07:36",
     tags: [
       {
         tag_id: uuid(),
@@ -81,6 +81,11 @@ const posts = [
         ]
       }
     ],
+    author: {
+      author_id: uuid(),
+      name: 'John Smith',
+      custom_url: 'john-smith'
+    }
   }
 ]
 

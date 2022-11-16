@@ -1,0 +1,16 @@
+.block_h2_span {
+  font-size: inherit;
+}
+
+.block_h2_span_bold {
+  font-style: italic;
+}
+.block_h2_span_italic {
+  font-style: italic;
+}
+.block_h2_span_line_through {
+  text-decoration: line-through;
+}
+.block_h2_span_underline {
+  text-decoration: underline;
+}

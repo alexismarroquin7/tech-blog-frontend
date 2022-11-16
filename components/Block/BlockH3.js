@@ -1,36 +1,37 @@
 import { v4 as uuid } from "uuid";
+import style from "./BlockH3.module.css";
 
-export function BlockParagraph ({
+export function BlockH3 ({
   block
 }) {
-  return <p>
+  return <h3>
     {block.content.map(content_item => {
       switch (content_item.marks[0].type) {
         case "plain":
           return content_item.value;
         case "bold":
-          return <span
+          return <span 
             key={uuid()}
-            style={{fontWeight: "bold"}}
+            className={`${style.block_h3_span} ${style.block_h3_span_bold}`}
           >{content_item.value}</span>;  
         case "italic":
-          return <span
+          return <span 
             key={uuid()}
-            style={{fontStyle: "italic"}}
+            className={`${style.block_h3_span} ${style.block_h3_span_italic}`}
           >{content_item.value}</span>;
         case "line-through":
-          return <span
+          return <span 
             key={uuid()}
-            style={{textDecoration: "line-through"}}
+            className={`${style.block_h3_span} ${style.block_h3_span_line_through}`}
           >{content_item.value}</span>;  
         case "underline":
-          return <span
+          return <span 
             key={uuid()}
-            style={{textDecoration: "underline"}}
+            className={`${style.block_h3_span} ${style.block_h3_span_underline}`}
           >{content_item.value}</span>;
         default:
           throw Error(`unknown block type: ${content_item.marks[0].type}`);
       }
     })}
-  </p>
+  </h3>
 }
