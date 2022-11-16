@@ -15,6 +15,7 @@
   display: flex;
   flex-flow: row wrap;
   gap: 1rem;
+  font-size: 2rem;
 }
 
 .tag_item {
